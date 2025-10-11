@@ -41,7 +41,7 @@ Etapa	Ferramenta	Propósito
 Limpeza e análise	SQL / Excel	Padronização, cálculos e KPIs
 Visualização e dashboard	[Power BI / Looker Studio / Tableau Public]	Criação de painéis interativos
 Documentação	Markdown + GitHub	Publicação e portfólio
-Storytelling visual	Canva / Figma (opcional)	Mockups e capa do projeto
+Storytelling visual	Canva (opcional)	Mockups e capa do projeto
 
 
 🔍 Perguntas de Negócio Respondidas
@@ -62,17 +62,16 @@ Receita total	$ 698.812,33	Soma de todas as vendas
 Nº de transações 149.116	Total de transações registradas
 Ticket médio	$ 4,69	Receita média por transação
 Loja com maior receita	Hell's Kitchen (34% das vendas)	Unidade com melhor desempenho
-Produto mais vendido	 Earl Grey e Dark chocolate	Em volume
-Categoria mais lucrativa	Coffe e Tea	Em receita total
+Produto mais vendido	 Café brasileiro e etiopico	Em volume
+Categoria mais lucrativa	Coffee e Tea	Em receita total
 
 💡 Insights Principais
 
+🕗 Horários de pico: 7h–10h concentram o maior volume de vendas.
 
-🕗 Horários de pico: 8h–10h e 15h–17h concentram o maior volume de vendas.
+📅 Dias mais movimentados: Segunda, quarta, quinta e sexta representam 58% do faturamento.
 
-📅 Dias mais movimentados: Sexta e sábado representam ~35% do faturamento.
-
-☕ Produtos campeões: Latte e Croissant são responsáveis por cerca de 25% da receita total.
+☕ Produtos campeões: Café brasileiro e etiopico são responsáveis por 13% da receita total.
 
 🏙️ Comparativo entre lojas:
 
@@ -96,7 +95,7 @@ Picos de Movimento – heatmap de horário × dia da semana
 
 Produtos – top 10 em volume e receita
 
-Pagamentos e Ticket Médio – análise por método e loja
+Ticket Médio – análise por loja
 
 📸 Capturas do Dashboard
 
@@ -108,7 +107,7 @@ Produtos
 Tendências	
 📘 Recomendações para o Gerente
 
-Reforçar o estoque e equipe nos horários de pico (8h–10h e 15h–17h).
+Reforçar o estoque e equipe nos horários de pico (7h-10h).
 
 Criar combos promocionais com os produtos mais vendidos (ex: Latte + Croissant).
 
@@ -116,7 +115,6 @@ Expandir o horário de funcionamento aos sábados, quando há maior fluxo.
 
 Treinar equipe de Brooklyn para aumentar o ticket médio (upselling de bebidas premium).
 
-Monitorar formas de pagamento, incentivando métodos digitais para reduzir tempo de fila.
 
 🧩 Estrutura do Projeto
 📂 coffee-shop-sales-analysis/
