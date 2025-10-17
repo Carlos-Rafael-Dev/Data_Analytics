@@ -129,6 +129,7 @@ ORDER BY store_location, total_transactions DESC;
 -- Dia mais movimentado por faturamento
 SELECT 
     DATENAME(WEEKDAY, transaction_date) AS day_of_week,
+	SUM(transaction_qty) AS total_sold,
     SUM(transaction_qty * unit_price) AS total_revenue
 FROM [coffee-shop]
 GROUP BY DATENAME(WEEKDAY, transaction_date),
@@ -139,6 +140,7 @@ ORDER BY total_revenue DESC;
 SELECT 
     store_location,
     DATENAME(WEEKDAY, transaction_date) AS day_of_week,
+	SUM(transaction_qty) AS total_sold,
     SUM(transaction_qty * unit_price) AS total_revenue
 FROM [coffee-shop]
 GROUP BY store_location,
@@ -147,4 +149,79 @@ GROUP BY store_location,
 ORDER BY store_location,
          total_revenue DESC;
 
--- ANALISE COMPARATIVA ENTRE LOJAS
+-- Categoria mais lucrativa por loja
+SELECT
+	store_location,
+	product_category,
+	SUM(transaction_qty) AS total_sold,
+	SUM(transaction_qty * unit_price) AS total_revenue
+FROM [coffee-shop]
+GROUP BY store_location, product_category
+ORDER BY store_location, total_revenue DESC;
+
+-- Produto mais lucrativo por loja
+SELECT
+	store_location,
+	LEFT(product_detail,
+		CHARINDEX(' ', product_detail + ' ') - 1) AS product_name,
+	SUM(transaction_qty) AS total_sold,
+	SUM(total_amount) AS revenue
+FROM [coffee-shop]
+GROUP BY store_location, LEFT(product_detail, CHARINDEX(' ', product_detail + ' ') - 1)
+ORDER BY store_location, revenue DESC;
+
+-- Produto mais vendido por loja
+SELECT
+	store_location,
+	LEFT(product_detail,
+		CHARINDEX(' ', product_detail + ' ') - 1) AS product_name,
+	SUM(transaction_qty) AS total_sold,
+	SUM(total_amount) AS revenue
+FROM [coffee-shop]
+GROUP BY store_location, LEFT(product_detail, CHARINDEX(' ', product_detail + ' ') - 1)
+ORDER BY store_location, total_sold DESC;
+
+-- Loja com maior faturamento médio diário
+SELECT 
+    store_location,
+    COUNT(DISTINCT CAST(transaction_date AS date)) AS active_days,
+    SUM(transaction_qty * unit_price) AS total_revenue,
+    SUM(transaction_qty * unit_price) / COUNT(DISTINCT CAST(transaction_date AS date)) AS avg_daily_revenue
+FROM [coffee-shop]
+GROUP BY store_location
+ORDER BY avg_daily_revenue DESC;
+
+-- Verificar receita nos feriados
+WITH holidays AS (
+	SELECT CAST('2023-01-01' AS date) AS holiday_date, 'New Year' AS holiday_name UNION ALL
+	SELECT '2023-01-16', 'Martin Luther King Day' UNION ALL
+	SELECT '2023-01-22', 'New year Chinese' UNION ALL
+	SELECT '2023-02-12', 'Super Bowl' UNION ALL
+	SELECT '2023-02-14', 'Valentines Day' UNION ALL
+	SELECT '2023-02-13', 'President Day' UNION ALL
+	SELECT '2023-03-17', 'St Patrick Day' UNION ALL
+	SELECT '2023-04-07', 'Christ Day' UNION ALL
+	SELECT '2023-04-09', 'Easter' UNION ALL
+	SELECT '2023-05-14', 'Mother Day' UNION ALL
+	SELECT '2023-05-29', 'Memorial Day' UNION ALL
+	SELECT '2023-06-14', 'Flag Day' UNION ALL
+	SELECT '2023-06-18', 'Father Day' UNION ALL
+	SELECT '2023-06-19', 'Juneteeth' UNION ALL
+	SELECT '2023-07-04', 'Independence Day'
+)
+SELECT
+	CASE
+		WHEN h.holiday_date IS NOT NULL THEN 'Holiday'
+		ELSE 'Non-Holiday'
+	END AS day_type,
+	COUNT(DISTINCT cs.transaction_id) AS total_transactions,
+	SUM(cs.transaction_qty * cs.unit_price) AS total_revenue,
+	AVG(cs.transaction_qty * cs.unit_price) AS avg_ticket
+FROM [coffee-shop] cs
+LEFT JOIN holidays h
+	ON CAST(cs.transaction_date AS date) = h.holiday_date
+GROUP BY
+	CASE
+		WHEN h.holiday_date IS NOT NULL THEN 'Holiday'
+		ELSE 'Non-Holiday'
+	END;
