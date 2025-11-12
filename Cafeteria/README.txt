@@ -14,7 +14,7 @@ Limpar e explorar o conjunto de dados de vendas;
 
 Extrair KPIs e padrões de comportamento;
 
-Criar um dashboard interativo em [Power BI / Looker Studio / Tableau Public];
+Criar um dashboard interativo em [Power BI];
 
 Comunicar os principais insights de negócio.
 
@@ -39,7 +39,7 @@ total_amount	Valor total da transação
 ⚙️ Ferramentas Utilizadas
 Etapa	Ferramenta	Propósito
 Limpeza e análise	SQL / Excel	Padronização, cálculos e KPIs
-Visualização e dashboard	[Power BI / Looker Studio / Tableau Public]	Criação de painéis interativos
+Visualização e dashboard	[Power BI]	Criação de painéis interativos
 Documentação	Markdown + GitHub	Publicação e portfólio
 Storytelling visual	Canva (opcional)	Mockups e capa do projeto
 
@@ -69,7 +69,7 @@ Categoria mais lucrativa	Coffee e Tea	Em receita total
 
 🕗 Horários de pico: 7h–10h concentram o maior volume de vendas.
 
-📅 Dias mais movimentados: Segunda, quarta, quinta e sexta representam 58% do faturamento.
+📅 Dias mais movimentados: Segunda, quinta e sexta.
 
 ☕ Produtos campeões: Café brasileiro e etiopico são responsáveis por 13% da receita total.
 
