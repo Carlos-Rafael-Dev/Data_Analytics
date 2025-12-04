@@ -43,7 +43,7 @@ O dataset inclui informações transacionais de vendas, com as seguintes colunas
 |Storytelling visual	     |Canva (opcional)	  |Mockups e capa do projeto
 
 
-### 🔍 Perguntas de Negócio Respondidas
+## 🔍 Perguntas de Negócio Respondidas
 
 📈 Como as vendas evoluíram ao longo do tempo?
 
@@ -56,13 +56,14 @@ O dataset inclui informações transacionais de vendas, com as seguintes colunas
 💳 Qual o ticket médio?
 
 ### 📊 Principais Métricas (KPIs)
-Indicador	Valor	Descrição
-Receita total	$ 698.812,33	Soma de todas as vendas
-Nº de transações 149.116	Total de transações registradas
-Ticket médio	$ 4,69	Receita média por transação
-Loja com maior receita	Hell's Kitchen (34% das vendas)	Unidade com melhor desempenho
-Produto mais vendido	 Café brasileiro e etiopico	Em volume
-Categoria mais lucrativa	Coffee e Tea	Em receita total
+|Indicador|	Valor|	Descrição|
+|--------|------|-------|
+|Receita total|	$ 698.812,33|	Soma de todas as vendas
+|Nº de transações| 149.116|	Total de transações registradas
+|Ticket médio|	$ 4,69|	Receita média por transação
+|Loja com maior receita|	Hell's Kitchen (34% das vendas)|	Unidade com melhor desempenho
+|Produto mais vendido|	 Café brasileiro e etiopico|	Em volume
+|Categoria mais lucrativa|	Coffee e Tea|	Em receita total
 
 ### 💡 Insights Principais
 
@@ -82,40 +83,20 @@ Queens → vendas equilibradas entre comidas e bebidas.
 
 ### 🖥️ Painel Interativo
 
-🔗 Acesse o dashboard completo: [🔧 Link do Power BI / Looker Studio / Tableau Public]
+🔗 Acesse o dashboard completo: [Link do Power BI]
 
-### Principais seções:
+### 📘 Recomendações para o Gerente
 
-Visão Geral – KPIs e comparativo entre lojas
+- Reforçar o estoque e equipe nos horários de pico (7h-10h).
 
-Tendência de Vendas – linha temporal diária e mensal
+- Criar combos promocionais com os produtos mais vendidos (ex: Latte + Croissant).
 
-Picos de Movimento – heatmap de horário × dia da semana
+- Expandir o horário de funcionamento aos sábados, quando há maior fluxo.
 
-Produtos – top 10 em volume e receita
-
-Ticket Médio – análise por loja
-
-📸 Capturas do Dashboard
-
-Tela	Preview
-Visão Geral	
-
-Produtos	
-
-Tendências	
-📘 Recomendações para o Gerente
-
-Reforçar o estoque e equipe nos horários de pico (7h-10h).
-
-Criar combos promocionais com os produtos mais vendidos (ex: Latte + Croissant).
-
-Expandir o horário de funcionamento aos sábados, quando há maior fluxo.
-
-Treinar equipe de Brooklyn para aumentar o ticket médio (upselling de bebidas premium).
+- Treinar equipe de Brooklyn para aumentar o ticket médio (upselling de bebidas premium).
 
 
-🧩 Estrutura do Projeto
+### 🧩 Estrutura do Projeto
 `📂 coffee-shop-sales-analysis/
 │
 ├── 📄 README.md
@@ -129,7 +110,7 @@ Treinar equipe de Brooklyn para aumentar o ticket médio (upselling de bebidas p
     ├── product_analysis.png
     └── sales_trends.png`
 
-📚 Aprendizados Técnicos
+### 📚 Aprendizados Técnicos
 
 Durante o projeto, desenvolvi habilidades em:
 
@@ -141,7 +122,7 @@ Design e storytelling de dashboards;
 
 Documentação profissional para portfólio.
 
-🚀 Próximos Passos
+### 🚀 Próximos Passos
 
 Aplicar os mesmos conceitos a outros datasets (ex: e-commerce, transporte, finanças);
 
