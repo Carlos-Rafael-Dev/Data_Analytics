@@ -1,9 +1,8 @@
 # ☕ Coffee Shop Sales Analysis – Maven Roasters
-<<<<<<< Updated upstream
+
 ## 📊 Projeto de Análise de Dados e Dashboard Interativo
-=======
+
 📊 Projeto de Análise de Dados e Dashboard Interativo
->>>>>>> Stashed changes
 
 Objetivo: Analisar as vendas da rede de cafeterias Maven Roasters e desenvolver um painel interativo para auxiliar o gerente na tomada de decisões sobre estoque, horários e produtos mais rentáveis.
 
