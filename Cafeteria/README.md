@@ -98,18 +98,20 @@ Queens → vendas equilibradas entre comidas e bebidas.
 
 
 ### 🧩 Estrutura do Projeto
-`📂 coffee-shop-sales-analysis/
+```
+📂 coffee-shop-sales-analysis/
 │
 ├── 📄 README.md
 ├── 🧠 sql_analysis.sql
-├── 📊 coffee_dashboard.pbix / tableau.twbx / looker_link.txt
+├── 📊 coffee_dashboard.pbix
 ├── 📈 insights_report.pdf
 ├── 📁 data/
-│   └── coffee_shop_sales.csv
+│   └── coffee_shop.csv
 └── 📷 screenshots/
     ├── dashboard_overview.png
-    ├── product_analysis.png
-    └── sales_trends.png`
+    ├── hour_rush.png
+    └── top_products.png
+```
 
 ### 📚 Aprendizados Técnicos
 
